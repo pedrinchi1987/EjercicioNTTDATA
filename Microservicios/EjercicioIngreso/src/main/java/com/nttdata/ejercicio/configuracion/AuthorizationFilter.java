@@ -73,19 +73,13 @@ public class AuthorizationFilter extends OncePerRequestFilter {
 
     private boolean existeToken(HttpServletRequest request) {
         System.out.println("existeToken");
-        System.out.println("valorHeader1: " + varProp.getValorHeader1());
-        System.out.println("valorHeader2: " + varProp.getValorHeader2());
-        System.out.println("claveSecreta: " + varProp.getClaveSecreta());
-        System.out.println("tokenEvaluar: " + varProp.getTokenEvaluar());
 
         String authenticationHeader1 = request.getHeader(varProp.getValorHeader1());
         String authenticationHeader2 = request.getHeader(varProp.getValorHeader2());
-        System.out.println("authenticationHeader1: " + authenticationHeader1);
-        System.out.println("authenticationHeader2: " + authenticationHeader2);
 
         boolean validacion = !((authenticationHeader1 == null || authenticationHeader1.isEmpty())
                 && (authenticationHeader2 == null || authenticationHeader2.isEmpty()));
-        System.out.println(validacion);
+        
         return validacion && evaluarPrimerToken(authenticationHeader1);
     }
 

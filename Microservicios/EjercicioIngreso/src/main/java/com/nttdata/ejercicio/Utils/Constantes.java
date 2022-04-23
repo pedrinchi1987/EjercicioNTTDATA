@@ -18,4 +18,5 @@ public class Constantes {
     public static final String ID_HEADER_1 = "X-Parse-REST-API-Key";
     public static final String ID_HEADER_2 = "X-JWT-KWY";
     public static final String NOMBRE_CLAIM = "authorities";
+    public static final int EXPIRACION_TOKEN = 600000;
 }

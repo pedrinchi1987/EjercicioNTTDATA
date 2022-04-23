@@ -29,9 +29,12 @@ public class VariablesProperties {
 
     @Value("${security.token.value}")
     private String tokenEvaluar;
-    
+
     @Value("${security.claim.name}")
     private String claimName;
+
+    @Value("${security.duration.token}")
+    private int expiracionToken;
 
     public String getValorHeader1() {
         System.out.println("VariablesProperties-valorHeader1: " + valorHeader1);
@@ -58,6 +61,10 @@ public class VariablesProperties {
         claimName = (claimName == null ? Constantes.NOMBRE_CLAIM : claimName);
         return claimName;
     }
-    
-    
+
+    public int getExpiracionToken() {
+        expiracionToken = (expiracionToken == 0 ? Constantes.EXPIRACION_TOKEN : expiracionToken);
+        return expiracionToken;
+    }
+
 }

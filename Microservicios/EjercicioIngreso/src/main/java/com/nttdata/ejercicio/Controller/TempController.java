@@ -53,7 +53,7 @@ public class TempController {
                         .map(GrantedAuthority::getAuthority)
                         .collect(Collectors.toList()))
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 600000))
+                .setExpiration(new Date(System.currentTimeMillis() + varProp.getExpiracionToken()))
                 .signWith(SignatureAlgorithm.HS512, varProp.getClaveSecreta().getBytes()).compact();
         
         System.out.println("-2-");
