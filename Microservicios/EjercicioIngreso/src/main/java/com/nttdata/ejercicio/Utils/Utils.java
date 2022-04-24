@@ -16,11 +16,12 @@ public class Utils {
         return String.format("Hello %s your message will be send", msj.getTo());
     }
 
-    public static String retornarMensajeExepcion() {
-        String msj = (new MensajesFijos()).getMensajeExepcion();
-        System.out.println(msj);
-        msj = (msj == null || msj.isEmpty() ? "ERROR" : msj);
+    public static String retornarMensajeExcepcion() {
+        return Constantes.MENSAJE;
+    }
 
-        return msj;
+    public static String retornarMensajeExcepcionSecurity(String msjExepcion) {
+        return Constantes.MENSAJE_EXCEPCION + " {" + msjExepcion + ")";
+
     }
 }
