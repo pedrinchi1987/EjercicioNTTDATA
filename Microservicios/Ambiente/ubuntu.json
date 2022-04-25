@@ -10,7 +10,7 @@
             "secret_key": "{{user `aws_secret_key`}}",
             "security_group_id":"sg-0fe5aab35d7155a05",
             "ssh_keypair_name":"pedrinchi_claves",
-            "ssh_private_key_file":"pedrinchi_claves.pem",
+            "ssh_private_key_file":"Microservicio/output/Packer/pedrinchi_claves.pem",
             "ami_name": "Imagen_Pedro_Montenegro_Rosales"
         }
     ],
