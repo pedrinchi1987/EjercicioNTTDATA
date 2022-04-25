@@ -15,10 +15,8 @@
     <description>Prueba Ingreso NTTDATA</description>
     <properties>
         <java.version>1.8</java.version>
-             <!--
-         <sonar.organization>pedrinchi1987</sonar.organization>
-         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
--->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <docker.image.prefix>ejercicio</docker.image.prefix>
     </properties>
     <dependencies>
         <dependency>
@@ -71,7 +69,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            </plugin>           
+            
         </plugins>
     </build>
 
