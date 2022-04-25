@@ -13,9 +13,13 @@ Docker
 Para poder obtener el token dinamico se debe ingresar al servicio Rest de nombre Token2. Ej:
 
 http://[IP_DEL_DESPLIEGUE]:[PUERTO_DESPLIEGUE]/Token2
+![Image1](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/ConsumoTokenRest.JPG)
 
-Para la generación o procesos de Ingrtegracion continua se ha utilizado la herramienta de Azure DevOps Service (nube).
+Para la generación o procesos de Integracion continua se ha utilizado la herramienta de Azure DevOps Service (nube).
 Los pipeline se encuentran en la carpeta: "PIPELINE" en sus respectivos formatos json y yml
+
+![Image2](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/PipelineIC.JPG)
+![Image3](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/PipelineEC.JPG)
 
 Para el correcto funcionamiento de los procesos se han creado algunas cuentas de nube que deben ser configuras en Azure DevOps,
 para su correcto funcionamiento:
@@ -27,6 +31,7 @@ para su correcto funcionamiento:
 * Cuenta de Sonarqube para los analisis de codigo (cuenta nube)
 
 Para todas estas cuentas es necesario, declarar repositorios publicos y obtener sus respectivas claves
+![Image4](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/Conexiones.JPG)
 
 El proceso de IC, utiliza el azure pipeline para poder desplegar, 
 
@@ -40,16 +45,20 @@ El despligue se realiza con las herramientas:
 * Docker Hub
 * AWS
 
+![Image5](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/EjecucionPipelineEC.JPG)
+![Image6](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/DockerGenerado.JPG)
+![Image7](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/InstanciaCreada.JPG)
+
+Se manejan las rutas configurables y reemplazables en el pipeline, por un tema de timeout, packer no termina exitoso.
+
 De momento solo se establecieron, un pipeline para todas las ramas, en caso de dividir por rama y ambiente, se tenia pensado clonar los pipeline, 
 y filtrarlos por ramas.
 
-![Image1](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/finalin/imagenes/Conexiones.JPG)
-![Image2](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/finalin/imagenes/ConsumoDevOpsRest.JPG)
-![Image3](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/finalin/imagenes/ConsumoTokenRest.JPG)
-![Image4](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/finalin/imagenes/DockerGenerado.JPG)
-![Image5](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/finalin/imagenes/ErrorTipoEquivocadoConsumoDevOpsRest.JPG)
-![Image6](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/finalin/imagenes/InstanciaCreada.JPG)
-![Image7](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/finalin/imagenes/PipelineEC.JPG)
-![Image8](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/finalin/imagenes/PipelineIC.JPG)
+Aplicativo Funcionando
+![Image8](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/ConsumoDevOpsRest.JPG)
+![Image9](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/ErrorTipoEquivocadoConsumoDevOpsRest.JPG)
 
+Para las parametrizaciones como clave, token, tenemos el archivo application.properties, del proyecto principal
+
+El ejercicio no esta completamente terminado pero igual envio un avance, gracias por la experiencia.
 
