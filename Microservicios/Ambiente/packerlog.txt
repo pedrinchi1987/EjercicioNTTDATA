@@ -1,0 +1,356 @@
+2022/04/24 22:50:20 [INFO] Packer version: 1.7.8 [go1.17.2 windows amd64]
+2022/04/24 22:50:20 [TRACE] discovering plugins in C:\ProgramData\chocolatey\lib\packer\tools
+2022/04/24 22:50:20 [TRACE] discovering plugins in C:\Users\PEDRINCHI\AppData\Roaming\packer.d\plugins
+2022/04/24 22:50:20 [TRACE] discovering plugins in .
+2022/04/24 22:50:20 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/04/24 22:50:20 [INFO] PACKER_CONFIG env var set; attempting to open config file: C:\Users\PEDRINCHI\AppData\Roaming\packer.config
+2022/04/24 22:50:20 [WARN] Config file doesn't exist: C:\Users\PEDRINCHI\AppData\Roaming\packer.config
+2022/04/24 22:50:20 [INFO] Setting cache directory: C:\Ejercicios\NTT_DATA\EjercicioPrueba\Microservicios\Ambiente\packer_cache
+e: cannot determine if process is in background: Process background check error: not implemented yet
+2022/04/24 22:50:20 [TRACE] Starting internal plugin packer-builder-amazon-ebs
+2022/04/24 22:50:20 Starting plugin: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe []string{"C:\\ProgramData\\chocolatey\\lib\\packer\\tools\\packer.exe", "plugin", "packer-builder-amazon-ebs"}
+2022/04/24 22:50:20 Waiting for RPC address for: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe
+2022/04/24 22:50:20 packer.exe plugin: [INFO] Packer version: 1.7.8 [go1.17.2 windows amd64]
+2022/04/24 22:50:20 packer.exe plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/04/24 22:50:20 packer.exe plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: C:\Users\PEDRINCHI\AppData\Roaming\packer.config
+2022/04/24 22:50:20 packer.exe plugin: [WARN] Config file doesn't exist: C:\Users\PEDRINCHI\AppData\Roaming\packer.config
+2022/04/24 22:50:20 packer.exe plugin: [INFO] Setting cache directory: C:\Ejercicios\NTT_DATA\EjercicioPrueba\Microservicios\Ambiente\packer_cache
+2022/04/24 22:50:20 packer.exe plugin: args: []string{"packer-builder-amazon-ebs"}
+2022/04/24 22:50:20 packer.exe plugin: Plugin port range: [10000,25000]
+2022/04/24 22:50:20 packer.exe plugin: Plugin address: tcp 127.0.0.1:10000
+2022/04/24 22:50:20 packer.exe plugin: Waiting for connection...
+2022/04/24 22:50:20 Received tcp RPC address for C:\ProgramData\chocolatey\lib\packer\tools\packer.exe: addr is 127.0.0.1:10000
+2022/04/24 22:50:20 packer.exe plugin: Serving a plugin connection...
+2022/04/24 22:50:20 [TRACE] Starting internal plugin packer-provisioner-shell
+2022/04/24 22:50:20 Starting plugin: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe []string{"C:\\ProgramData\\chocolatey\\lib\\packer\\tools\\packer.exe", "plugin", "packer-provisioner-shell"}
+2022/04/24 22:50:20 Waiting for RPC address for: C:\ProgramData\chocolatey\lib\packer\tools\packer.exe
+2022/04/24 22:50:21 packer.exe plugin: [INFO] Packer version: 1.7.8 [go1.17.2 windows amd64]
+2022/04/24 22:50:21 packer.exe plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/04/24 22:50:21 packer.exe plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: C:\Users\PEDRINCHI\AppData\Roaming\packer.config
+2022/04/24 22:50:21 packer.exe plugin: [WARN] Config file doesn't exist: C:\Users\PEDRINCHI\AppData\Roaming\packer.config
+2022/04/24 22:50:21 packer.exe plugin: [INFO] Setting cache directory: C:\Ejercicios\NTT_DATA\EjercicioPrueba\Microservicios\Ambiente\packer_cache
+2022/04/24 22:50:21 packer.exe plugin: args: []string{"packer-provisioner-shell"}
+2022/04/24 22:50:21 packer.exe plugin: Plugin port range: [10000,25000]
+2022/04/24 22:50:21 packer.exe plugin: Plugin address: tcp 127.0.0.1:10000
+2022/04/24 22:50:21 packer.exe plugin: Waiting for connection...
+2022/04/24 22:50:21 Received tcp RPC address for C:\ProgramData\chocolatey\lib\packer\tools\packer.exe: addr is 127.0.0.1:10000
+2022/04/24 22:50:21 packer.exe plugin: Serving a plugin connection...
+2022/04/24 22:50:21 Preparing build: microservicio_ejercicio
+2022/04/24 22:50:21 packer.exe plugin: [INFO] (aws): No AWS timeout and polling overrides have been set. Packer will default to waiter-specific delays and timeouts. If you would like to customize the length of time between retries and max number of retries you may do so by setting the environment variables AWS_POLL_DELAY_SECONDS and AWS_MAX_ATTEMPTS or the configuration options aws_polling_delay_seconds and aws_polling_max_attempts to your desired values.
+2022/04/24 22:50:21 ui: microservicio_ejercicio: output will be in this color.
+2022/04/24 22:50:21 ui: 
+2022/04/24 22:50:21 Build debug mode: false
+2022/04/24 22:50:21 Force build: false
+2022/04/24 22:50:21 On error: 
+2022/04/24 22:50:21 Waiting on builds to complete...
+2022/04/24 22:50:21 Starting build run: microservicio_ejercicio
+2022/04/24 22:50:21 Running builder: amazon-ebs
+2022/04/24 22:50:21 [INFO] (telemetry) Starting builder microservicio_ejercicio
+2022/04/24 22:50:21 packer.exe plugin: [INFO] AWS Auth provider used: "StaticProvider"
+2022/04/24 22:50:21 packer.exe plugin: Found region us-east-1
+2022/04/24 22:50:21 packer.exe plugin: [INFO] AWS Auth provider used: "StaticProvider"
+2022/04/24 22:50:22 ui: ==> microservicio_ejercicio: Prevalidating any provided VPC information
+2022/04/24 22:50:22 ui: ==> microservicio_ejercicio: Prevalidating AMI Name: Imagen_Pedro_Montenegro_Rosales
+2022/04/24 22:50:23 packer.exe plugin: Using AMI Filters {
+2022/04/24 22:50:23 packer.exe plugin:   ImageIds: ["ami-0f9fc25dd2506cf6d"]
+2022/04/24 22:50:23 packer.exe plugin: }
+2022/04/24 22:50:24 ui:     microservicio_ejercicio: Found Image ID: ami-0f9fc25dd2506cf6d
+2022/04/24 22:50:24 ui: ==> microservicio_ejercicio: Using existing SSH private key
+2022/04/24 22:50:24 packer.exe plugin: Using specified security groups: [sg-0fe5aab35d7155a05]
+2022/04/24 22:50:24 ui: ==> microservicio_ejercicio: Launching a source AWS instance...
+2022/04/24 22:50:24 ui: ==> microservicio_ejercicio: Adding tags to source instance
+2022/04/24 22:50:24 ui:     microservicio_ejercicio: Adding tag: "Name": "Packer Builder"
+2022/04/24 22:50:26 ui:     microservicio_ejercicio: Instance ID: i-0042e9bafbcd6a7d8
+2022/04/24 22:50:26 ui: ==> microservicio_ejercicio: Waiting for instance (i-0042e9bafbcd6a7d8) to become ready...
+2022/04/24 22:50:58 packer.exe plugin: [INFO] Not using winrm communicator, skipping get password...
+2022/04/24 22:50:58 ui: ==> microservicio_ejercicio: Using SSH communicator to connect: 100.24.98.207
+2022/04/24 22:50:58 packer.exe plugin: [INFO] Waiting for SSH, up to timeout: 5m0s
+2022/04/24 22:50:58 ui: ==> microservicio_ejercicio: Waiting for SSH to become available...
+2022/04/24 22:50:58 packer.exe plugin: Using host value: 100.24.98.207
+2022/04/24 22:51:06 packer.exe plugin: [DEBUG] TCP connection to SSH ip/port failed: dial tcp 100.24.98.207:22: connectex: No connection could be made because the target machine actively refused it.
+2022/04/24 22:51:11 packer.exe plugin: Using host value: 100.24.98.207
+2022/04/24 22:51:11 packer.exe plugin: [INFO] Attempting SSH connection to 100.24.98.207:22...
+2022/04/24 22:51:11 packer.exe plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/04/24 22:51:11 packer.exe plugin: [DEBUG] handshaking with SSH
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] handshake complete!
+2022/04/24 22:51:13 packer.exe plugin: [INFO] no local agent socket, will not connect agent
+2022/04/24 22:51:13 ui: ==> microservicio_ejercicio: Connected to SSH!
+2022/04/24 22:51:13 packer.exe plugin: Running the provision hook
+2022/04/24 22:51:13 [INFO] (telemetry) Starting provisioner shell
+2022/04/24 22:51:13 ui: ==> microservicio_ejercicio: Provisioning with shell script: Scripts/actualizacion_ambiente.sh
+2022/04/24 22:51:13 packer.exe plugin: Opening Scripts/actualizacion_ambiente.sh for reading
+2022/04/24 22:51:13 packer.exe plugin: [INFO] 234 bytes written for 'uploadData'
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] Opening new ssh session
+2022/04/24 22:51:13 [INFO] 234 bytes written for 'uploadData'
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] Starting remote scp process:  scp -vt /tmp
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] Copying input data into temporary file so we can read the length
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] scp: Uploading script_5426.sh: perms=C0644 size=234
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] Waiting for SSH session to complete.
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] scp stderr (length 31): Sink: C0644 234 script_5426.sh
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] Opening new ssh session
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] starting remote command: chmod 0755 /tmp/script_5426.sh
+2022/04/24 22:51:13 packer.exe plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/04/24 22:51:13 [INFO] RPC client: Communicator ended with: 0
+2022/04/24 22:51:13 [INFO] RPC endpoint: Communicator ended with: 0
+2022/04/24 22:51:13 packer.exe plugin: [INFO] RPC client: Communicator ended with: 0
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] Opening new ssh session
+2022/04/24 22:51:13 packer.exe plugin: [DEBUG] starting remote command: chmod +x /tmp/script_5426.sh; PACKER_BUILDER_TYPE='amazon-ebs' PACKER_BUILD_NAME='microservicio_ejercicio'  /tmp/script_5426.sh
+2022/04/24 22:51:14 ui:     microservicio_ejercicio: ------------------> INICIO ACTUALIZAR AMBIENTE <------------------
+2022/04/24 22:51:15 ui:     microservicio_ejercicio: Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+2022/04/24 22:51:15 ui error: ==> microservicio_ejercicio: Existing lock /var/run/yum.pid: another copy is running as pid 3197.
+2022/04/24 22:51:15 ui error: ==> microservicio_ejercicio: Another app is currently holding the yum lock; waiting for it to exit...
+2022/04/24 22:51:15 ui error: ==> microservicio_ejercicio:   The other application is: yum
+2022/04/24 22:51:15 ui error: ==> microservicio_ejercicio:     Memory : 110 M RSS (402 MB VSZ)
+2022/04/24 22:51:15 ui error: ==> microservicio_ejercicio:     Started: Mon Apr 25 03:51:08 2022 - 00:08 ago
+2022/04/24 22:51:15 ui error: ==> microservicio_ejercicio:     State  : Running, pid: 3197
+2022/04/24 22:51:17 ui error: ==> microservicio_ejercicio: Another app is currently holding the yum lock; waiting for it to exit...
+2022/04/24 22:51:17 ui error: ==> microservicio_ejercicio:   The other application is: yum
+2022/04/24 22:51:17 ui error: ==> microservicio_ejercicio:     Memory : 163 M RSS (456 MB VSZ)
+2022/04/24 22:51:17 ui error: ==> microservicio_ejercicio:     Started: Mon Apr 25 03:51:08 2022 - 00:10 ago
+2022/04/24 22:51:17 ui error: ==> microservicio_ejercicio:     State  : Running, pid: 3197
+2022/04/24 22:51:19 ui:     microservicio_ejercicio: Cleaning repos: amzn2-core amzn2extra-docker amzn2extra-kernel-5.10
+2022/04/24 22:51:19 ui:     microservicio_ejercicio: 16 metadata files removed
+2022/04/24 22:51:19 ui:     microservicio_ejercicio: 6 sqlite files removed
+2022/04/24 22:51:19 ui:     microservicio_ejercicio: 0 metadata files removed
+2022/04/24 22:51:21 ui:     microservicio_ejercicio: Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+2022/04/24 22:51:21 ui error: ==> microservicio_ejercicio: Existing lock /var/run/yum.pid: another copy is running as pid 3265.
+2022/04/24 22:51:21 ui error: ==> microservicio_ejercicio: Another app is currently holding the yum lock; waiting for it to exit...
+2022/04/24 22:51:21 ui error: ==> microservicio_ejercicio:   The other application is: yum
+2022/04/24 22:51:21 ui error: ==> microservicio_ejercicio:     Memory :  36 M RSS (330 MB VSZ)
+2022/04/24 22:51:21 ui error: ==> microservicio_ejercicio:     Started: Mon Apr 25 03:51:09 2022 - 00:13 ago
+2022/04/24 22:51:21 ui error: ==> microservicio_ejercicio:     State  : Sleeping, pid: 3265
+2022/04/24 22:51:23 ui error: ==> microservicio_ejercicio: Another app is currently holding the yum lock; waiting for it to exit...
+2022/04/24 22:51:23 ui error: ==> microservicio_ejercicio:   The other application is: yum
+2022/04/24 22:51:23 ui error: ==> microservicio_ejercicio:     Memory :  42 M RSS (335 MB VSZ)
+2022/04/24 22:51:23 ui error: ==> microservicio_ejercicio:     Started: Mon Apr 25 03:51:09 2022 - 00:15 ago
+2022/04/24 22:51:23 ui error: ==> microservicio_ejercicio:     State  : Running, pid: 3265
+2022/04/24 22:51:25 ui:     microservicio_ejercicio: Resolving Dependencies
+2022/04/24 22:51:25 ui:     microservicio_ejercicio: --> Running transaction check
+2022/04/24 22:51:25 ui:     microservicio_ejercicio: ---> Package docker.x86_64 0:20.10.7-5.amzn2 will be installed
+2022/04/24 22:51:25 ui:     microservicio_ejercicio: --> Processing Dependency: runc >= 1.0.0 for package: docker-20.10.7-5.amzn2.x86_64
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: --> Processing Dependency: libcgroup >= 0.40.rc1-5.15 for package: docker-20.10.7-5.amzn2.x86_64
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: --> Processing Dependency: containerd >= 1.3.2 for package: docker-20.10.7-5.amzn2.x86_64
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: --> Processing Dependency: pigz for package: docker-20.10.7-5.amzn2.x86_64
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: --> Running transaction check
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: ---> Package containerd.x86_64 0:1.4.6-8.amzn2 will be installed
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: ---> Package libcgroup.x86_64 0:0.41-21.amzn2 will be installed
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: ---> Package pigz.x86_64 0:2.3.4-1.amzn2.0.1 will be installed
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: ---> Package runc.x86_64 0:1.0.0-2.amzn2 will be installed
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: --> Finished Dependency Resolution
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: Dependencies Resolved
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: ================================================================================
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:  Package        Arch       Version                  Repository             Size
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: ================================================================================
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: Installing:
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:  docker         x86_64     20.10.7-5.amzn2          amzn2extra-docker      42 M
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: Installing for dependencies:
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:  containerd     x86_64     1.4.6-8.amzn2            amzn2extra-docker      24 M
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:  libcgroup      x86_64     0.41-21.amzn2            amzn2-core             66 k
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:  pigz           x86_64     2.3.4-1.amzn2.0.1        amzn2-core             81 k
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:  runc           x86_64     1.0.0-2.amzn2            amzn2extra-docker     3.3 M
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: Transaction Summary
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: ================================================================================
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: Install  1 Package (+4 Dependent packages)
+2022/04/24 22:51:26 ui:     microservicio_ejercicio:
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: Total download size: 69 M
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: Installed size: 285 M
+2022/04/24 22:51:26 ui:     microservicio_ejercicio: Downloading packages:
+2022/04/24 22:51:27 ui:     microservicio_ejercicio: --------------------------------------------------------------------------------
+2022/04/24 22:51:27 ui:     microservicio_ejercicio: Total                                               64 MB/s |  69 MB  00:01
+2022/04/24 22:51:27 ui:     microservicio_ejercicio: Running transaction check
+2022/04/24 22:51:28 ui:     microservicio_ejercicio: Running transaction test
+2022/04/24 22:51:28 ui:     microservicio_ejercicio: Transaction test succeeded
+2022/04/24 22:51:28 ui:     microservicio_ejercicio: Running transaction
+2022/04/24 22:51:32 ui:     microservicio_ejercicio:   Installing : runc-1.0.0-2.amzn2.x86_64                                    1/5
+2022/04/24 22:51:32 ui:     microservicio_ejercicio:   Installing : containerd-1.4.6-8.amzn2.x86_64                              2/5
+2022/04/24 22:51:32 ui:     microservicio_ejercicio:   Installing : libcgroup-0.41-21.amzn2.x86_64                               3/5
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   Installing : pigz-2.3.4-1.amzn2.0.1.x86_64                                4/5
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   Installing : docker-20.10.7-5.amzn2.x86_64                                5/5
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   Verifying  : docker-20.10.7-5.amzn2.x86_64                                1/5
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   Verifying  : containerd-1.4.6-8.amzn2.x86_64                              2/5
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   Verifying  : runc-1.0.0-2.amzn2.x86_64                                    3/5
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   Verifying  : pigz-2.3.4-1.amzn2.0.1.x86_64                                4/5
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   Verifying  : libcgroup-0.41-21.amzn2.x86_64                               5/5
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:
+2022/04/24 22:51:38 ui:     microservicio_ejercicio: Installed:
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   docker.x86_64 0:20.10.7-5.amzn2
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:
+2022/04/24 22:51:38 ui:     microservicio_ejercicio: Dependency Installed:
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   containerd.x86_64 0:1.4.6-8.amzn2       libcgroup.x86_64 0:0.41-21.amzn2
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:   pigz.x86_64 0:2.3.4-1.amzn2.0.1         runc.x86_64 0:1.0.0-2.amzn2
+2022/04/24 22:51:38 ui:     microservicio_ejercicio:
+2022/04/24 22:51:38 ui:     microservicio_ejercicio: Complete!
+2022/04/24 22:51:39 ui:     microservicio_ejercicio: Installing docker
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:   0  ansible2                 available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =2.4.2  =2.4.6  =2.8  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:   2  httpd_modules            available    [ =1.0  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:   3  memcached1.5             available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =1.5.1  =1.5.16  =1.5.17 ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:   5  postgresql9.6            available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =9.6.6  =9.6.8  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:   6  postgresql10             available    [ =10  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:   9  R3.4                     available    [ =3.4.3  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  10  rust1                    available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =1.22.1  =1.26.0  =1.26.1  =1.27.2  =1.31.0  =1.38.0
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:           =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  11  vim                      available    [ =8.0  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  18  libreoffice              available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =5.0.6.2_15  =5.3.6.1  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  19  gimp                     available    [ =2.8.22 ]
+2022/04/24 22:51:39 ui error: ==> microservicio_ejercicio: Redirecting to /bin/systemctl start docker.service
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  20  docker=latest            enabled      \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =17.12.1  =18.03.1  =18.06.1  =18.09.9  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  21  mate-desktop1.x          available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =1.19.0  =1.20.0  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  22  GraphicsMagick1.3        available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =1.3.29  =1.3.32  =1.3.34  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  23  tomcat8.5                available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =8.5.31  =8.5.32  =8.5.38  =8.5.40  =8.5.42  =8.5.50
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:           =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  24  epel                     available    [ =7.11  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  25  testing                  available    [ =1.0  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  26  ecs                      available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  27  corretto8                available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =1.8.0_192  =1.8.0_202  =1.8.0_212  =1.8.0_222  =1.8.0_232
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:           =1.8.0_242  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  28  firecracker              available    [ =0.11  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  29  golang1.11               available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =1.11.3  =1.11.11  =1.11.13  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  30  squid4                   available    [ =4  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  32  lustre2.10               available    \
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:         [ =2.10.5  =2.10.8  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  33  java-openjdk11           available    [ =11  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  34  lynis                    available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  35  kernel-ng                available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  36  BCC                      available    [ =0.x  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  37  mono                     available    [ =5.x  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  38  nginx1                   available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  39  ruby2.6                  available    [ =2.6  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  40  mock                     available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  41  postgresql11             available    [ =11  =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  42  php7.4                   available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  43  livepatch                available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  44  python3.8                available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  45  haproxy2                 available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  46  collectd                 available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  47  aws-nitro-enclaves-cli   available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  48  R4                       available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:   _  kernel-5.4               available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  50  selinux-ng               available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  51  php8.0                   available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  52  tomcat9                  available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  53  unbound1.13              available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  54  mariadb10.5              available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  55  kernel-5.10=latest       enabled      [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  56  redis6                   available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  57  ruby3.0                  available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  58  postgresql12             available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  59  postgresql13             available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  60  mock2                    available    [ =stable ]
+2022/04/24 22:51:39 ui:     microservicio_ejercicio:  61  dnsmasq2.85              available    [ =stable ]
+2022/04/24 22:51:40 packer.exe plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/04/24 22:51:40 [INFO] 6917 bytes written for 'stdout'
+2022/04/24 22:51:40 [INFO] 1082 bytes written for 'stderr'
+2022/04/24 22:51:40 [INFO] RPC client: Communicator ended with: 0
+2022/04/24 22:51:40 [INFO] RPC endpoint: Communicator ended with: 0
+2022/04/24 22:51:40 ui:     microservicio_ejercicio: ------------------> FIN MONITORIZADOR Metricbeat <------------------
+2022/04/24 22:51:40 packer.exe plugin: [INFO] 6917 bytes written for 'stdout'
+2022/04/24 22:51:40 packer.exe plugin: [INFO] 1082 bytes written for 'stderr'
+2022/04/24 22:51:40 packer.exe plugin: [INFO] RPC client: Communicator ended with: 0
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] Opening new ssh session
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] starting remote command: rm -f /tmp/script_5426.sh
+2022/04/24 22:51:40 packer.exe plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/04/24 22:51:40 [INFO] RPC client: Communicator ended with: 0
+2022/04/24 22:51:40 [INFO] RPC endpoint: Communicator ended with: 0
+2022/04/24 22:51:40 packer.exe plugin: [INFO] RPC client: Communicator ended with: 0
+2022/04/24 22:51:40 ui: ==> microservicio_ejercicio: Provisioning with shell script: Scripts/deploy_img_docker.sh
+2022/04/24 22:51:40 packer.exe plugin: Opening Scripts/deploy_img_docker.sh for reading
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] Opening new ssh session
+2022/04/24 22:51:40 packer.exe plugin: [INFO] 244 bytes written for 'uploadData'
+2022/04/24 22:51:40 [INFO] 244 bytes written for 'uploadData'
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] Starting remote scp process:  scp -vt /tmp
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] Copying input data into temporary file so we can read the length
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] scp: Uploading script_5426.sh: perms=C0644 size=244
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] Waiting for SSH session to complete.
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] scp stderr (length 31): Sink: C0644 244 script_5426.sh
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] Opening new ssh session
+2022/04/24 22:51:40 packer.exe plugin: [DEBUG] starting remote command: chmod 0755 /tmp/script_5426.sh
+2022/04/24 22:51:41 packer.exe plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/04/24 22:51:41 [INFO] RPC client: Communicator ended with: 0
+2022/04/24 22:51:41 [INFO] RPC endpoint: Communicator ended with: 0
+2022/04/24 22:51:41 packer.exe plugin: [INFO] RPC client: Communicator ended with: 0
+2022/04/24 22:51:41 packer.exe plugin: [DEBUG] Opening new ssh session
+2022/04/24 22:51:41 packer.exe plugin: [DEBUG] starting remote command: chmod +x /tmp/script_5426.sh; PACKER_BUILDER_TYPE='amazon-ebs' PACKER_BUILD_NAME='microservicio_ejercicio'  /tmp/script_5426.sh
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: ------------------> INSTALAR IMAGEN DOCKER <------------------
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: 454: Pulling from pedrinchi1987/nttda
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: e7c96db7181b: Pulling fs layer
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: f910a506b6cb: Pulling fs layer
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: c2274a1a0e27: Pulling fs layer
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: c23b5e0847ff: Pulling fs layer
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: c23b5e0847ff: Waiting
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: f910a506b6cb: Verifying Checksum
+2022/04/24 22:51:41 ui:     microservicio_ejercicio: f910a506b6cb: Download complete
+2022/04/24 22:51:42 ui:     microservicio_ejercicio: e7c96db7181b: Verifying Checksum
+2022/04/24 22:51:42 ui:     microservicio_ejercicio: e7c96db7181b: Download complete
+2022/04/24 22:51:42 ui:     microservicio_ejercicio: c23b5e0847ff: Verifying Checksum
+2022/04/24 22:51:42 ui:     microservicio_ejercicio: c23b5e0847ff: Download complete
+2022/04/24 22:51:43 ui:     microservicio_ejercicio: c2274a1a0e27: Verifying Checksum
+2022/04/24 22:51:43 ui:     microservicio_ejercicio: c2274a1a0e27: Download complete
+2022/04/24 22:51:43 ui:     microservicio_ejercicio: e7c96db7181b: Pull complete
+2022/04/24 22:51:43 ui:     microservicio_ejercicio: f910a506b6cb: Pull complete
+2022/04/24 22:51:47 ui:     microservicio_ejercicio: c2274a1a0e27: Pull complete
+2022/04/24 22:51:48 ui:     microservicio_ejercicio: c23b5e0847ff: Pull complete
+2022/04/24 22:51:48 ui:     microservicio_ejercicio: Digest: sha256:60a60dd5ae62eab54cf1413ac42800922c9af69d1dcf5b26da279a7081f0eac2
+2022/04/24 22:51:48 ui:     microservicio_ejercicio: Status: Downloaded newer image for pedrinchi1987/nttda:454
+2022/04/24 22:51:48 ui:     microservicio_ejercicio: docker.io/pedrinchi1987/nttda:454
+2022/04/24 22:51:51 ui:     microservicio_ejercicio:
+2022/04/24 22:51:51 ui:     microservicio_ejercicio:   .   ____          _            __ _ _
+2022/04/24 22:51:51 ui:     microservicio_ejercicio:  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2022/04/24 22:51:51 ui:     microservicio_ejercicio: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2022/04/24 22:51:51 ui:     microservicio_ejercicio:  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2022/04/24 22:51:51 ui:     microservicio_ejercicio:   '  |____| .__|_| |_|_| |_\__, | / / / /
+2022/04/24 22:51:51 ui:     microservicio_ejercicio:  =========|_|==============|___/=/_/_/_/
+2022/04/24 22:51:51 ui:     microservicio_ejercicio:  :: Spring Boot ::                (v2.6.6)
+2022/04/24 22:51:51 ui:     microservicio_ejercicio:
+2022/04/24 22:51:51 ui:     microservicio_ejercicio: 2022-04-25 03:51:52.863  INFO 1 --- [           main] c.n.ejercicio.EjercicioApplication       : Starting EjercicioApplication v0.0.1-SNAPSHOT using Java 1.8.0_212 on d59678250f89 with PID 1 (/ejercicio-0.0.1-SNAPSHOT.jar started by root in /)
+2022/04/24 22:51:51 ui:     microservicio_ejercicio: 2022-04-25 03:51:52.878  INFO 1 --- [           main] c.n.ejercicio.EjercicioApplication       : No active profile set, falling back to 1 default profile: "default"
+2022/04/24 22:51:54 ui:     microservicio_ejercicio: 2022-04-25 03:51:55.994  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022/04/24 22:51:54 ui:     microservicio_ejercicio: 2022-04-25 03:51:56.033  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022/04/24 22:51:54 ui:     microservicio_ejercicio: 2022-04-25 03:51:56.034  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022/04/24 22:51:55 ui:     microservicio_ejercicio: 2022-04-25 03:51:56.291  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022/04/24 22:51:55 ui:     microservicio_ejercicio: 2022-04-25 03:51:56.292  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3266 ms
+2022/04/24 22:51:56 ui:     microservicio_ejercicio: 2022-04-25 03:51:57.431  WARN 1 --- [           main] .s.s.UserDetailsServiceAutoConfiguration :
+2022/04/24 22:51:56 ui:     microservicio_ejercicio:
+2022/04/24 22:51:56 ui:     microservicio_ejercicio: Using generated security password: bbd60b5d-c165-4472-bb7e-c424a4ff5fea
+2022/04/24 22:51:56 ui:     microservicio_ejercicio:
+2022/04/24 22:51:56 ui:     microservicio_ejercicio: This generated password is for development use only. Your security configuration must be updated before running your application in production.
+2022/04/24 22:51:56 ui:     microservicio_ejercicio:
+2022/04/24 22:51:56 ui:     microservicio_ejercicio: 2022-04-25 03:51:57.818  INFO 1 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022/04/24 22:51:57 ui:     microservicio_ejercicio: 2022-04-25 03:51:58.753  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022/04/24 22:51:57 ui:     microservicio_ejercicio: 2022-04-25 03:51:58.778  INFO 1 --- [           main] c.n.ejercicio.EjercicioApplication       : Started EjercicioApplication in 7.158 seconds (JVM running for 8.249)
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: 2022-04-25 03:52:43.616  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: 2022-04-25 03:52:43.616  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: 2022-04-25 03:52:43.618  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: -if 0-
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: existeToken
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: VariablesProperties-valorHeader1: null
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: -if 3-
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: -1-
+2022/04/24 22:52:42 ui:     microservicio_ejercicio: -2-
+2022/04/24 22:52:58 packer.exe plugin: Received interrupt signal (count: 1). Ignoring.
+2022/04/24 22:52:58 packer.exe plugin: Received interrupt signal (count: 1). Ignoring.
+2022/04/24 22:52:58 ui error: Cancelling build after receiving interrupt
+2022/04/24 22:52:58 Cancelling builder after context cancellation context canceled
+2022/04/24 22:52:58 packer.exe plugin: Cancelling provisioning due to context cancellation: context canceled
+2022/04/24 22:52:58 packer.exe plugin: Cancelling hook after context cancellation context canceled
+2022/04/24 22:52:58 Cancelling provisioner after context cancellation context canceled
+2022/04/24 22:52:58 ui: ==> microservicio_ejercicio: Terminating the source AWS instance...
+2022/04/24 22:52:58 packer.exe plugin: Retryable error: context canceled
+2022/04/24 22:52:58 [INFO] (telemetry) ending shell
