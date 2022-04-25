@@ -12,6 +12,10 @@ import com.nttdata.ejercicio.Entities.Mensaje;
  */
 public class Utils {
 
+    private Utils() {
+
+    }
+
     public static String retornaMensaje(Mensaje msj) {
         return String.format("Hello %s your message will be send", msj.getTo());
     }

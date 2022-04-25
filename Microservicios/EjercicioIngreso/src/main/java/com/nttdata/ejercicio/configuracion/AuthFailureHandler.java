@@ -28,6 +28,5 @@ public class AuthFailureHandler implements AuthenticationEntryPoint {
         ObjectMapper objectMapper = new ObjectMapper();
         String objetoJson = objectMapper.writeValueAsString(new Respuesta(Utils.retornarMensajeExcepcionSecurity(authException.getMessage())));
         response.getOutputStream().println(objetoJson);
-        //  response.getOutputStream().println((new Respuesta(Utils.retornarMensajeExcepcion())).toString());
     }
 }

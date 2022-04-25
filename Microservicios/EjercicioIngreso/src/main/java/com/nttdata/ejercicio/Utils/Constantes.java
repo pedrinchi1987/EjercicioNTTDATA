@@ -10,6 +10,10 @@ package com.nttdata.ejercicio.Utils;
  */
 public class Constantes {
 
+    private Constantes() {
+
+    }
+
     public static final String MENSAJE = "ERROR";
     public static final String MENSAJE_EXCEPCION = "ERROR DE SEGURIDAD.";
 

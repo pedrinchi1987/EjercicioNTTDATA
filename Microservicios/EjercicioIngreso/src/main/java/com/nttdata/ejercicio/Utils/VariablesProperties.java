@@ -37,7 +37,6 @@ public class VariablesProperties {
     private int expiracionToken;
 
     public String getValorHeader1() {
-        System.out.println("VariablesProperties-valorHeader1: " + valorHeader1);
         valorHeader1 = (valorHeader1 == null ? Constantes.ID_HEADER_1 : valorHeader1);
         return valorHeader1;
     }

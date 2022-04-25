@@ -1,0 +1,61 @@
+trigger:
+  branches:
+    include:
+    - '*'
+name: $(date:yyyyMMdd)$(rev:.r)
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: refs/heads/main
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    vmImage: ubuntu-20.04
+  steps:
+  - checkout: self
+    clean: true
+  - task: SonarCloudPrepare@1
+    displayName: Prepare analysis on SonarCloud
+    inputs:
+      SonarCloud: 1e24d8b0-1af6-477b-918a-2f1f01acfb87
+      organization: pedrito1348
+      scannerMode: Other
+      extraProperties: "# Additional properties that will be passed to the scanner, \n# Put one key=value per line, example:\n# sonar.exclusions=**/*.bin\nsonar.projectKey=pedrito1348_NTTDATA\nsonar.projectName=NTTDATA"
+  - task: Maven@3
+    displayName: Compilar Artefacto
+    inputs:
+      mavenPOMFile: Microservicios/EjercicioIngreso/pom.xml
+      sqAnalysisEnabled: true
+  - task: SonarCloudPublish@1
+    displayName: Publish Quality Gate Result
+  - task: CopyFiles@2
+    displayName: Copiar Artefacto
+    condition: succeededOrFailed()
+    inputs:
+      SourceFolder: $(system.defaultworkingdirectory)
+      Contents: '**/*.jar'
+      TargetFolder: $(build.artifactstagingdirectory)/target
+      flattenFolders: true
+  - task: CopyFiles@2
+    displayName: Copiar DockerFile
+    condition: succeededOrFailed()
+    inputs:
+      SourceFolder: Microservicios/EjercicioIngreso/
+      Contents: '**/Dockerfile'
+      TargetFolder: $(build.artifactstagingdirectory)
+  - task: CopyFiles@2
+    displayName: Copiar Ambiente
+    condition: succeededOrFailed()
+    inputs:
+      SourceFolder: Microservicios/Ambiente
+      Contents: '**/*.*'
+      TargetFolder: $(build.artifactstagingdirectory)/Packer
+  - task: PublishBuildArtifacts@1
+    displayName: Publicar Artefacto
+    condition: succeededOrFailed()
+    inputs:
+      PathtoPublish: $(build.artifactstagingdirectory)
+      ArtifactName: output
+...

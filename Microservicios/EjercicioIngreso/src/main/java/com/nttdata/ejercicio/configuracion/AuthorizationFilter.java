@@ -31,25 +31,20 @@ public class AuthorizationFilter extends OncePerRequestFilter {
     private VariablesProperties varProp = new VariablesProperties();
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        System.out.println("-if 0-");
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {        
         try {
             if (existeToken(request)) {
                 Claims claim = validarToken(request);
                 if (claim.get(varProp.getClaimName()) != null) {
-                    System.out.println("-if 1-");
                     setUpSpringAuthentication(claim);
                 } else {
-                    System.out.println("-if 2-");
                     SecurityContextHolder.clearContext();
                 }
             } else {
-                System.out.println("-if 3-");
                 SecurityContextHolder.clearContext();
             }
             filterChain.doFilter(request, response);
         } catch (ExpiredJwtException | UnsupportedJwtException | MalformedJwtException e) {
-            System.out.println("-exception-");
             response.setStatus(HttpServletResponse.SC_FORBIDDEN);
             ((HttpServletResponse) response).sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
             return;
@@ -72,7 +67,6 @@ public class AuthorizationFilter extends OncePerRequestFilter {
     }
 
     private boolean existeToken(HttpServletRequest request) {
-        System.out.println("existeToken");
 
         String authenticationHeader1 = request.getHeader(varProp.getValorHeader1());
         String authenticationHeader2 = request.getHeader(varProp.getValorHeader2());
