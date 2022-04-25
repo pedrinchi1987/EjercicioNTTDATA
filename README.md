@@ -39,6 +39,11 @@ Para el pipeline de Release es muy importante tener en cuenta las claves de AWS,
 var_aws_access_key
 var_aws_secret_key
 
+Otro punto importante es configurar correctamente el grupo de seguridad, para poder ver el puerto que principio es 5000, pero es configurable.
+Recordar que los scripts estan dados para una maquina de tipo aws-linux.
+
+![Image10](https://github.com/pedrinchi1987/EjercicioNTTDATA/blob/main/imagenes/DefinicionPacker.JPG)
+
 El despligue se realiza con las herramientas:
 
 * Packer
