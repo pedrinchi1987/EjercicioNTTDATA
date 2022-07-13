@@ -13,7 +13,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.GrantedAuthority;
@@ -46,29 +45,23 @@ public class TempController {
     private String generarToken() {        
         List<GrantedAuthority> grantedAuthorities = AuthorityUtils
                 .commaSeparatedStringToAuthorityList("ROLE_USER");
-        System.out.println("-1-");
         
-        String token = Jwts.builder().setId("softtekJWT").setSubject("DevOPS")
+       return Jwts.builder().setId("softtekJWT").setSubject("DevOPS")
                 .claim(varProp.getClaimName(), grantedAuthorities.stream()
                         .map(GrantedAuthority::getAuthority)
                         .collect(Collectors.toList()))
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + varProp.getExpiracionToken()))
                 .signWith(SignatureAlgorithm.HS512, varProp.getClaveSecreta().getBytes()).compact();
-        
-        System.out.println("-2-");
-        return token;
     }
 
     @ExceptionHandler
     public ResponseEntity<Respuesta> handleException(HttpRequestMethodNotSupportedException ex) {
-        System.out.println("-HttpRequestMethodNotSupportedException-");
         return new ResponseEntity<>(new Respuesta(Utils.retornarMensajeExcepcion()), HttpStatus.METHOD_NOT_ALLOWED);
     }
 
     @ExceptionHandler
     public ResponseEntity<Respuesta> handleException(Exception ex) {     
-        System.out.println("-Exception-");
         return new ResponseEntity<>(new Respuesta(ex.getMessage()), HttpStatus.METHOD_NOT_ALLOWED);
     }
 }

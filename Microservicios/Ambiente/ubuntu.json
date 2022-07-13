@@ -1,0 +1,25 @@
+{
+    "builders": [{
+            "region": "us-east-1",
+            "name": "microservicio_ejercicio",
+            "source_ami": "ami-0f9fc25dd2506cf6d",
+            "instance_type": "t2.micro",
+            "ssh_username": "ec2-user",
+            "type": "amazon-ebs",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "security_group_id":"sg-0fe5aab35d7155a05",
+            "ssh_keypair_name":"aws_conect2",
+            "ssh_private_key_file":"{RUTA}aws_conect2.pem",
+            "ami_name": "Imagen_Pedro_Montenegro_Rosales"
+        }
+    ],
+    "provisioners": [{
+            "scripts": [
+                "{RUTA}Scripts/actualizacion_ambiente.sh",
+                "{RUTA}Scripts/deploy_img_docker.sh"
+            ],
+            "type": "shell"
+        }
+    ]
+}

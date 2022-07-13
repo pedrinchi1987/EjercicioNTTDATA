@@ -10,11 +10,13 @@
     </parent>
     <groupId>com.nttdata</groupId>
     <artifactId>ejercicio</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>ejercicio</name>
     <description>Prueba Ingreso NTTDATA</description>
     <properties>
         <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <docker.image.prefix>ejercicio</docker.image.prefix>
     </properties>
     <dependencies>
         <dependency>
@@ -67,7 +69,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            </plugin>           
+            
         </plugins>
     </build>
 
