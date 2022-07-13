@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nttda
+spec:
+  selector:
+    matchLabels:
+      app: nttda
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nttda
+    spec:
+      containers:
+      - name: nttda
+        image: pedrinchi1987/nttda:475
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        #command: ["echo", "SUCCESS"]
+        ports:
+        - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nttda-api-svc
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 5001
+      targetPort: 8080
+  selector:
+    app: nttda
